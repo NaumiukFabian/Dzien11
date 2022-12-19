@@ -1,0 +1,50 @@
+﻿<Window x:Class="P03AplikacjaPogoda.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:P03AplikacjaPogoda"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1165">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="10 0 0 0"/>
+            <Setter Property="Width" Value="100"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="btnWczytajPogode" Click="btnWczytajPogode_Click" Height="50" Content="Wczytaj pogode" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button x:Name="btnWczytajPogode2" Content="Wczytaj Pogode2" Height="50" Click="btnWczytajPogode2_Click" HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
+                <Button x:Name="btnWczytajPogode3" Content="Wczytaj Pogode3" Height="50" Click="btnWczytajPogode3_Click" HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" >
+                <Button x:Name="btnWczytajPogode4" Content="Wczytaj Pogode4" Height="50" Click="btnWczytajPogode4_Click"  HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
+                <Button x:Name="btnWczytajPogode5" Content="Wczytaj Pogode5" Height="50" Click="btnWczytajPogode5_Click"   HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
+                <Button x:Name="btnWczytajPogode6" Content="Wczytaj Pogode6" Height="50" Click="btnWczytajPogode6_Click"   HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
+            </StackPanel>
+        </StackPanel>
+       
+        
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <Label Content="Podaj miasto dla których chcesz uzyskać temperaturę"></Label>
+            <TextBox x:Name="txtMiasto" HorizontalAlignment="Left" TextWrapping="Wrap" AcceptsReturn="True" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        </StackPanel>
+        <Label Name="lblKomunikaty" Grid.Row="1" Grid.Column="0" Content="" />
+        <ListBox x:Name="lbWynik" Grid.Row="1" Grid.Column="1"></ListBox>
+        <ProgressBar x:Name="pbPostep" Grid.Row="2" Grid.Column="1"></ProgressBar>
+    </Grid>
+</Window>

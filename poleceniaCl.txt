@@ -1,0 +1,9 @@
+dotnet new [nazwa projektu]
+dotnet new console
+dotnet new webapi
+dotnet new mvc
+
+dotnet new sln - tworzenie solucji
+dotnet run - (zbudowanie projektu i od razu uruchomienie)
+dotnet build - zbudowanie calej solucji
+dotnet sln add - dodanie do solucji konkretnego projektu
